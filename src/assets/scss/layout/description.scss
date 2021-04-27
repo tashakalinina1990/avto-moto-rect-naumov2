@@ -1,0 +1,19 @@
+.description {
+  margin-top: 90px;
+  margin-left: 48px;
+}
+
+.description__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: inherit;
+  max-width: 992px;
+  margin-bottom: 84px;
+}
+
+@media (min-width: $end-adaptive-width) and (max-width: $start-adaptive-width) {
+  .description {
+    margin-top: 7.3%;
+    margin-left: 4%;
+  }
+}

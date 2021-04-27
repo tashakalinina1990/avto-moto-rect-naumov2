@@ -1,0 +1,38 @@
+.button {
+  @include base-font($medium);
+  display: inline-flex;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  width: max-content;
+  padding: 16px 18px 15px 19px;
+  text-transform: uppercase;
+  background-color: $button-color-red;
+  border: 1px solid $button-color-red;
+  color: $button-color-white;
+
+  &--red {
+    margin-bottom: 16px;
+  }
+
+  &--white {
+    background-color: $button-color-white;
+    color: $button-color-red;
+  }
+
+  &--red:hover,
+  &--red:focus {
+    background-color: $button-color-red-hover;
+    border-color: $button-color-red-hover;
+  }
+
+  &--white:hover,
+  &--white:focus {
+    background-color: $button-color-red;
+    color: $button-color-white;
+  }
+
+  &--red:active,
+  &--white:active {
+    opacity: 0.8;
+  }
+}

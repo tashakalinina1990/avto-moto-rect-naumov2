@@ -1,0 +1,127 @@
+.form,
+.form__wrapper,
+.form__inputs-wrapper,
+.form__list,
+.form__rating-wrapper,
+.form__stars-wrapper {
+  @include base-flex;
+  z-index: 5;
+}
+
+.form {
+  justify-content: center;
+}
+
+.form__list {
+  @include reset-list;
+}
+
+.form__list,
+.form__inputs-wrapper {
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.form__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.form__wrapper {
+  margin-bottom: 35px;
+}
+
+.form__stars-wrapper {
+  flex-direction: row-reverse;
+}
+
+.form__input[type="text"] {
+  height: 50px;
+}
+
+.form__textarea {
+  min-height: 118px;
+  margin-bottom: -5px;
+  padding-top: 15px;
+  resize: none;
+}
+
+.form__input,
+.form__textarea {
+  width: 300px;
+  padding-left: 25px;
+  line-height: 19px;
+  outline: none;
+  border: 1px solid $input-border-color;
+
+  &--required {
+    background: no-repeat 12px 12px url("../../img/icon-required.svg") $global-background-color;
+  }
+}
+
+.form--error .form__input,
+.form--error .form__textarea {
+  &--required {
+    border-color: $error-color;
+  }
+}
+
+.form--error .form__item {
+  &--required:before {
+    content: "Пожалуйста, заполните поле";
+    position: absolute;
+    top: -25px;
+    color: $error-color;
+  }
+}
+
+.form__fieldset {
+  @include reset-text;
+  margin-bottom: 9px;
+  border: none;
+}
+
+.form__legend {
+  @include base-font($medium);
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 4px;
+  margin-right: 14px;
+  color: $other-text-color;
+}
+
+.form__label {
+  &--star,
+  &--active {
+    color: $default-color-star;
+  }
+
+  &--star:not(:last-child) {
+    margin-left: 8px;
+  }
+}
+
+.form__label--star:hover,
+.form__input[type="radio"]:checked + .form__label--star,
+.form__input[type="radio"]:checked ~ .form__label--star {
+  color: $button-color-red;
+}
+
+.form__rating-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.form__button-submit {
+  margin-bottom: 0;
+}

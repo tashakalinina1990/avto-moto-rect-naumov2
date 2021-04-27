@@ -1,0 +1,71 @@
+.contacts,
+.contacts__info {
+  @include base-flex;
+}
+
+.contacts {
+  margin-top: 26px;
+  margin-bottom: 140px;
+}
+
+.contacts__info,
+.contacts__name,
+.contacts__value,
+.contacts__link {
+  @include reset-text;
+}
+
+.contacts__info {
+  flex-direction: column;
+  width: 274px;
+  margin-right: 74px;
+}
+
+.contacts__name {
+  @include base-font($bold);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 9px;
+  color: $contacts-text-color;
+}
+
+.contacts__value {
+  @include base-font($medium);
+  font-size: 14px;
+  line-height: 19px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.contacts__value,
+.contacts__link {
+  color: $other-text-color;
+}
+
+.contacts__link {
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.contacts__map-wrapper {
+  position: relative;
+  margin-top: 4px;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+@media (min-width: $end-adaptive-width) and (max-width: $start-adaptive-width) {
+  .contacts__info {
+    width: 21%;
+  }
+}

@@ -1,0 +1,27 @@
+@import "./base/normalize.scss";
+@import "./base/fonts.scss";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/global.scss";
+
+@import "./layout/container.scss";
+@import "./layout/header.scss";
+@import "./layout/main.scss";
+@import "./layout/footer.scss";
+
+@import "./layout/nav.scss";
+
+@import "./layout/description.scss";
+@import "./layout/slider.scss";
+@import "./layout/details.scss";
+@import "./layout/button.scss";
+
+@import "./layout/tabs.scss";
+@import "./layout/features.scss";
+@import "./layout/reviews.scss";
+@import "./layout/definition.scss";
+@import "layout/rating";
+@import "./layout/contacts.scss";
+
+@import "./layout/popup.scss";
+@import "./layout/form.scss";

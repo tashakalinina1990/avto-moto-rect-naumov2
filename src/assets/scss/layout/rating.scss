@@ -1,0 +1,32 @@
+.rating,
+.rating__stars {
+  @include base-flex;
+}
+
+.rating {
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.rating__stars {
+  @include reset-list;
+  margin-right: 22px;
+}
+
+.rating__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.rating__text {
+  @include reset-text;
+  padding-bottom: 2px;
+  color: $button-color-red;
+}
+
+.rating__icon {
+  color: $default-color-star;
+
+  &--red {
+    color: $button-color-red;
+  }
+}
